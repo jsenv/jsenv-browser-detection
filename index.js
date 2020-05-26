@@ -1,1 +1,1 @@
-export { detectBrowser } from "./src/detectBrowser.js";
+export { detectBrowser } from "./src/detectBrowser.js"

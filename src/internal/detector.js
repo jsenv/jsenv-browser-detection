@@ -1,25 +1,25 @@
-import { detectAndroid } from "./detectAndroid.js";
-import { detectInternetExplorer } from "./detectInternetExplorer.js";
-import { detectOpera } from "./detectOpera.js";
-import { detectEdge } from "./detectEdge.js";
-import { detectFirefox } from "./detectFirefox.js";
-import { detectChrome } from "./detectChrome.js";
-import { detectSafari } from "./detectSafari.js";
-import { detectElectron } from "./detectElectron.js";
-import { detectIOS } from "./detectIOS.js";
+import { detectAndroid } from "./detectAndroid.js"
+import { detectInternetExplorer } from "./detectInternetExplorer.js"
+import { detectOpera } from "./detectOpera.js"
+import { detectEdge } from "./detectEdge.js"
+import { detectFirefox } from "./detectFirefox.js"
+import { detectChrome } from "./detectChrome.js"
+import { detectSafari } from "./detectSafari.js"
+import { detectElectron } from "./detectElectron.js"
+import { detectIOS } from "./detectIOS.js"
 
 const detectorCompose = (detectors) => () => {
-  let i = 0;
+  let i = 0
   while (i < detectors.length) {
-    const detector = detectors[i];
-    i++;
-    const result = detector();
+    const detector = detectors[i]
+    i++
+    const result = detector()
     if (result) {
-      return result;
+      return result
     }
   }
-  return null;
-};
+  return null
+}
 
 export const detector = detectorCompose([
   detectOpera,
@@ -31,4 +31,4 @@ export const detector = detectorCompose([
   detectElectron,
   detectIOS,
   detectAndroid,
-]);
+])
