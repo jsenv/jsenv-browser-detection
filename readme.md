@@ -20,3 +20,5 @@ Browser detection script.
   </head>
 </html>
 ```
+
+See https://codepen.io/dmail/pen/OJyGYPP
